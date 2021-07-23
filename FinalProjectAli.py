@@ -189,13 +189,13 @@ def user_stats(df):
     # TO DO: Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df.columns.tolist() :
         earliest_Birth_Year = df['Birth Year'].min()
-        print('Earliest Year Of Birth',earliest_Birth_Year )
+        print('Earliest Year Of Birth',str(earliest_Birth_Year).split(".")[0] )
         
         recent_Birth_Year = df['Birth Year'].max()
-        print('Recent Year Of Birth',recent_Birth_Year )
+        print('Recent Year Of Birth',str(recent_Birth_Year).split(".")[0] )
 
         Common_Birth_Year = df['Birth Year'].mode()[0]
-        print('Common Year Of Birth ',Common_Birth_Year )
+        print('Common Year Of Birth ',str(Common_Birth_Year).split(".")[0] )
     else:
         print ("Birth Year: No Data To Show")
     print("\nThis took %s seconds." % (time.time() - start_time))
